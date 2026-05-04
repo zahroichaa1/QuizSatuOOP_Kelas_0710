@@ -6,15 +6,10 @@ public class Kendaraan {
     private String tahunKendaraan;
     private String statusServis;
 
-    public Kendaraan(String jenisKendaraan, String nomorPolisi, String tahunKendaraan, String statusServis) {
-        this.jenisKendaraan = jenisKendaraan;
+    public Kendaraan(String nomorPolisi, String tahunKendaraan, String statusServis) {
         this.nomorPolisi = nomorPolisi;
         this.tahunKendaraan = tahunKendaraan;
         this.statusServis = statusServis;
-    }
-
-    public String getJenisKendaraan(){
-        return jenisKendaraan;
     }
 
     public String getNomorPolisi(){
@@ -27,9 +22,6 @@ public class Kendaraan {
 
     public String getStatusServis(){
         return statusServis;
-    }
-    public void setJenisKendaraan(String jenisKendaraan){
-        this.jenisKendaraan = jenisKendaraan;
     }
     public void setNomorPolisi(String nomorPolisi){
         this.nomorPolisi = nomorPolisi;
@@ -46,5 +38,8 @@ public class Kendaraan {
         System.out.println("Nomor Polisi: " + nomorPolisi);
         System.out.println("Tahun Kendaraan: " + tahunKendaraan);
         System.out.println("Status Servis: " + statusServis);
+    }
+    public void ubahStatusServis(String statusBaru) {
+        setStatusServis(statusBaru);
     }
 }
