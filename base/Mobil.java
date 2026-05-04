@@ -4,8 +4,8 @@ public class Mobil extends Kendaraan {
     private int jumlahPintu;
     private String tipeTransmisi;
 
-    public Mobil(String jenisKendaraan, String nomorPolisi, String tahunKendaraan, String statusServis, int jumlahPintu, String tipeTransmisi) {
-        super(jenisKendaraan, nomorPolisi, tahunKendaraan, statusServis);
+    public Mobil(String nomorPolisi, String tahunKendaraan, String statusServis, int jumlahPintu, String tipeTransmisi) {
+        super(nomorPolisi, tahunKendaraan, statusServis);
         this.jumlahPintu = jumlahPintu;
         this.tipeTransmisi = tipeTransmisi;
     }
@@ -27,6 +27,9 @@ public class Mobil extends Kendaraan {
         super.tampilkanInfo();
         System.out.println("Jumlah Pintu: " + jumlahPintu);
         System.out.println("Tipe Transmisi: " + tipeTransmisi);
+    }
+    public void ubahStatusServis(String statusBaru) {
+        setStatusServis(statusBaru);
     }
 }
 
