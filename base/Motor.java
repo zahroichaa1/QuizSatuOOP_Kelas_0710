@@ -4,8 +4,8 @@ public class Motor extends Kendaraan {
     private String jenisMesin;
     private double kapasitasTangki;
 
-    public Motor(String jenisKendaraan, String nomorPolisi, String tahunKendaraan, String statusServis, String jenisMesin, double kapasitasTangki) {
-        super(jenisKendaraan, nomorPolisi, tahunKendaraan, statusServis);
+    public Motor(String nomorPolisi, String tahunKendaraan, String statusServis, String jenisMesin, double kapasitasTangki) {
+        super(nomorPolisi, tahunKendaraan, statusServis);
         this.jenisMesin = jenisMesin;
         this.kapasitasTangki = kapasitasTangki;
     }
@@ -27,6 +27,9 @@ public class Motor extends Kendaraan {
         super.tampilkanInfo();
         System.out.println("Jenis Mesin: " + jenisMesin);
         System.out.println("Kapasitas Tangki: " + kapasitasTangki);
+    }
+    public void ubahStatusServis(String statusBaru) {
+        setStatusServis(statusBaru);
     }
     
 }
