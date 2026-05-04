@@ -4,13 +4,26 @@ import base.Motor;
 
 public class Main {
     public static void main(String[] args) {
-        Motor motor1 = new Motor("Motor", "B 1234 CD", "2020", "Servis Berkala", "4-tak", 15.5);
-        Mobil mobil1 = new Mobil("Mobil", "B 5678 EF", "2019", "Servis Ringan", 4, "Otomatis");
+        Kendaraan kendaraan = new Kendaraan("AG 1234 CD", "2020", "Servis Berkala");
+        Motor motor = new Motor("S 1234 CD", "2020", "Servis Berkala", "4-tak", 15.5);
+        Mobil mobil = new Mobil("N 5678 EF", "2019", "Servis Ringan", 4, "Otomatis");
 
+        System.out.println("\nInformasi Kendaraan:");
+        kendaraan.tampilkanInfo();
+        
         System.out.println("Informasi Motor:");
-        motor1.tampilkanInfo();
+        motor.tampilkanInfo();
 
         System.out.println("\nInformasi Mobil:");
-        mobil1.tampilkanInfo();
+        mobil.tampilkanInfo();
+        
+        System.out.println("\nMengubah status servis motor...");
+        motor.ubahStatusServis("Servis Berat");
+        System.out.println("\nInformasi Motor setelah diubah:");
+        motor.tampilkanInfo();
+        System.out.println("\nMengubah status servis mobil...");
+        mobil.ubahStatusServis("Servis Berat");
+        System.out.println("\nInformasi Mobil setelah diubah:");
+        mobil.tampilkanInfo();
     }
 }
